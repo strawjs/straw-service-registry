@@ -1,0 +1,17 @@
+model:
+- type:
+  - ios:
+    - dep:
+      - cocoapods
+  - ios.js:
+    - dep:
+      - bower
+      - npm
+  - android:
+    - dep:
+      - gradle
+      - maven
+  - android.js:
+    - dep:
+      - bower
+      - npm
