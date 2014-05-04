@@ -1,17 +1,24 @@
-model:
-- type:
-  - ios:
-    - dep:
-      - cocoapods
-  - ios.js:
-    - dep:
-      - bower
-      - npm
-  - android:
-    - dep:
-      - gradle
-      - maven
-  - android.js:
-    - dep:
-      - bower
-      - npm
+straw.spec:
+- platform: num {ios,android}
+- service.topic: string e.g. http
+- type: enum {js,native}
+- name: straw-{$platform}-{$topic}-service-{$type}
+
+dependecy:
+- ios-native:
+  - cocoapods
+- ios-js:
+  - bower
+  - npm
+- android-native:
+  - maven
+  - gradle
+- android-js:
+  - bower
+  - npm
+
+straw-ios-service-http-js
+straw-ios-service-http-native
+
+straw-ios-native
+straw-ios-js
