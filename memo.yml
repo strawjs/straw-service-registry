@@ -3,22 +3,31 @@ straw.spec:
 - service.topic: string e.g. http
 - type: enum {js,native}
 - name: straw-{$platform}-{$topic}-service-{$type}
+- dep-type: {cocoapods, wildpods, bower, wildbower, npm, wildnpm, maven, wildmaven, gradle, wildgradle}
 
-dependecy:
-- ios-native:
-  - cocoapods
-- ios-js:
-  - bower
-  - npm
-- android-native:
-  - maven
-  - gradle
-- android-js:
-  - bower
-  - npm
 
+dep-type:
+- cocoapods:
+  - values:
+    - spec
+    - version
+- wildpods:
+  - values:
+    - git
+    - branch
+    - commit
+- bower
+- wildbower
+- npm
+- wildnpm
+- maven
+- wildmaven
+- wildgradle
+
+
+straw-ios-service-http
 straw-ios-service-http-js
-straw-ios-service-http-native
 
-straw-ios-native
+
 straw-ios-js
+straw-ios
